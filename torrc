@@ -1,0 +1,10 @@
+VirtualAddrNetworkIPv4 10.192.0.0/10
+AutomapHostsOnResolve 1
+TransPort 9040
+DNSPort 5353
+# Optional: Safe logging
+# Log notice file /var/log/tor/notices.log
+
+ControlPort 9051
+CookieAuthentication 0
+HashedControlPassword 16:ACB9D61CE8719B7C60B8C9EA596524BCBAACFCDEFFF00E2BC9A2077B49
