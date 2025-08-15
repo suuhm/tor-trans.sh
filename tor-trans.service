@@ -1,0 +1,18 @@
+# /etc/systemd/system/tor-trans.service
+#
+# systemctl daemon-reload
+# systemctl enable tor-trans.service
+
+[Unit]
+Description=Transparent Tor Proxy via iptables
+After=network.target tor.service
+Requires=tor.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tor-trans.sh start
+ExecStop=/usr/local/bin/tor-trans.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
